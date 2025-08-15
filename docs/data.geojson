@@ -1,0 +1,11 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [8.5417, 47.3769] },
+      "properties": { "name": "Mount Example", "elevation": 2500, "date": "2025-08-15" }
+    }
+  ]
+}
+

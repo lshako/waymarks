@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Summit Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .leaflet-popup-content {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+<script>
+    // Initialize the map
+    let defaultLat = 46.8;
+    let defaultLng = 8.3;
+    let defaultZoom = 6;
+
+    const map = L.map('map').setView([defaultLat, defaultLng], defaultZoom);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(map);
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+                map.setView([lat, lng], 18);
+            },
+            (error) => {
+                console.warn('Geolocation failed:', error);
+            }
+        );
+    } else {
+        console.warn('Geolocation is not supported by this browser.');
+    }
+
+    // Load your visited peaks GeoJSON
+    fetch('./data.geojson')
+        .then(response => response.json())
+        .then(geojson => {
+            L.geoJSON(geojson, {
+                onEachFeature: (feature, layer) => {
+                    const name = feature.properties.name || 'Unknown';
+                    const elevation = feature.properties.elevation || 'N/A';
+                    const date = feature.properties.date || '';
+                    layer.bindPopup(`<b>${name}</b><br>Elevation: ${elevation} m<br>Visited: ${date}`);
+                },
+                pointToLayer: (feature, latlng) => L.marker(latlng)
+            }).addTo(map);
+        })
+        .catch(err => console.error('Failed to load GeoJSON:', err));    </script>
+</body>
+</html>
