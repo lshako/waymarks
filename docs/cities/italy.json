@@ -1,0 +1,54 @@
+{
+  "Agerola": {
+    "lat": 40.63771,
+    "lon": 14.53884
+  },
+  "Bergamo": {
+    "lat": 45.69601,
+    "lon": 9.66721
+  },
+  "Capri": {
+    "lat": 40.55073,
+    "lon": 14.24263
+  },
+  "Castel del Monte": {
+    "lat": 42.36544,
+    "lon": 13.72592
+  },
+  "Fontainemore": {
+    "lat": 45.64746,
+    "lon": 7.85952
+  },
+  "Gressan": {
+    "lat": 45.7205,
+    "lon": 7.29311
+  },
+  "Gressoney-La-Trinitè": {
+    "lat": 45.82967,
+    "lon": 7.82321
+  },
+  "Milan": {
+    "lat": 45.46427,
+    "lon": 9.18951
+  },
+  "Naples": {
+    "lat": 40.85216,
+    "lon": 14.26811
+  },
+  "Ofena": {
+    "lat": 42.32536,
+    "lon": 13.75864
+  },
+  "Rome": {
+    "lat": 41.89193,
+    "lon": 12.51133
+  },
+  "Valgrisenche": {
+    "lat": 45.63036,
+    "lon": 7.064
+  },
+  "Valtournenche": {
+    "lat": 45.87607,
+    "lon": 7.6243
+  }
+}

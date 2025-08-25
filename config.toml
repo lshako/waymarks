@@ -1,0 +1,10 @@
+[geonames]
+base_url = "https://download.geonames.org/export/dump/"
+country_info_file = "countryInfo.txt"
+cities_file = "cities500.zip"
+download_dir = "downloads"
+
+[docs]
+dir = "docs"
+countries_file = "countries.json"
+cities_folder = "cities"

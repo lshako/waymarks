@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Test", "elevation": 4478, "date": "2023-08-15" },
+      "geometry": { "type": "Point", "coordinates": [7.6586, 45.9763] }
+    }
+     ]
+}

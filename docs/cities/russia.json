@@ -1,0 +1,22 @@
+{
+  "Kazan": {
+    "lat": 55.78874,
+    "lon": 49.12214
+  },
+  "Petrozavodsk": {
+    "lat": 61.78491,
+    "lon": 34.34691
+  },
+  "Polyarnyye Zori": {
+    "lat": 67.36611,
+    "lon": 32.49806
+  },
+  "Saint Petersburg": {
+    "lat": 59.93863,
+    "lon": 30.31413
+  },
+  "moscow": {
+    "lat": 55.75222,
+    "lon": 37.61556
+  }
+}

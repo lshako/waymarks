@@ -1,0 +1,6 @@
+3038832	Vila	Vila	Casas Vila,Vila	42.53176	1.56654	P	PPL	AD		03				1418		1318	Europe/Andorra	2024-11-04
+3038999	Soldeu	Soldeu	Sol'deu,Soldeu,surudeu,swldw,Сольдеу,סולדאו,سولدو,スルデウ	42.57688	1.66769	P	PPL	AD		02				602		1832	Europe/Andorra	2017-11-06
+3039077	Sispony	Sispony	Sispony	42.53368	1.51613	P	PPL	AD		04				833		1315	Europe/Andorra	2024-11-04
+3039154	El Tarter	El Tarter	Ehl Tarter,El Tarter,El Tarter - Principau d'Andorra,El Tarter - Principáu d'Andorra,al tartr,Ел Тартер,Эл Тартер,ال تارتر	42.57952	1.65362	P	PPL	AD		02				1052		1721	Europe/Andorra	2012-11-03
+3039163	Sant Julià de Lòria	Sant Julia de Loria	San Julia,San Julià,Sant Julia de Loria,Sant Julià de Lòria,Sant-Zhulija-de-Lorija,sheng hu li ya-de luo li ya,Сант-Жулия-де-Лория,サン・ジュリア・デ・ロリア教区,圣胡利娅-德洛里亚,圣胡利娅－德洛里亚	42.46372	1.49129	P	PPLA	AD		06				8022		921	Europe/Andorra	2013-11-23
+3039604	Pas de la Casa	Pas de la Casa	Pas de la Kasa,Пас де ла Каса	42.54277	1.73361	P	PPL	AD		03				2363	2050	2106	Europe/Andorra	2008-06-09
