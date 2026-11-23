@@ -3,8 +3,813 @@
   "features": [
     {
       "type": "Feature",
-      "properties": { "name": "Test", "elevation": 4478, "date": "2023-08-15" },
-      "geometry": { "type": "Point", "coordinates": [7.6586, 45.9763] }
+      "properties": {
+        "name": "Monte Mars",
+        "elevation": 2444,
+        "date": "2022-07-13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.91531,
+          45.63343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jabal Ramm",
+        "elevation": 1478,
+        "date": "2022-10-27"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.39551,
+          29.57506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abū ar Ramīlah",
+        "elevation": 1241,
+        "date": "2022-10-28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.40657,
+          29.58278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maja e Gurit",
+        "elevation": 1533,
+        "date": "2023-10-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.37056,
+          41.3225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maja e Qorres",
+        "elevation": 1721,
+        "date": "2023-10-03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.60566,
+          40.21683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kintoki Zan",
+        "elevation": 1386,
+        "date": "2023-12-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.00484,
+          35.28966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pedra Amarela",
+        "elevation": 1423,
+        "date": "2024-12-24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.43333,
+          38.76667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cabeço do Soiza",
+        "elevation": 1255,
+        "date": "2024-12-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.45647,
+          38.7837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cruz Alta",
+        "elevation": 1540,
+        "date": "2024-12-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.39167,
+          38.78333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hoher Kranzberg",
+        "elevation": 2117,
+        "date": "2025-05-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.22898,
+          47.45283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gindelalmschneid",
+        "elevation": 1954,
+        "date": "2025-05-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.79548,
+          47.72381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Heiglkopf",
+        "elevation": 1239,
+        "date": "2025-07-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.51667,
+          47.73333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vorderer Drachenkopf",
+        "elevation": 2425,
+        "date": "2025-07-20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.92639,
+          47.35778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brecherspitz",
+        "elevation": 1790,
+        "date": "2025-07-31"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.87009,
+          47.67667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baumgartenschneid",
+        "elevation": 1596,
+        "date": "2025-08-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.80915,
+          47.70244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grüne Kuppe",
+        "elevation": 2524,
+        "date": "2025-08-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.11159,
+          46.86127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dreiländerspitze",
+        "elevation": 3191,
+        "date": "2025-08-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.14496,
+          46.851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karkopf",
+        "elevation": 1885,
+        "date": "2025-08-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.89267,
+          47.68599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Benediktenwand",
+        "elevation": 1981,
+        "date": "2025-08-17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.46386,
+          47.65107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jochberg",
+        "elevation": 1881,
+        "date": "2025-08-24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.37245,
+          47.62651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abay peak",
+        "elevation": 4264,
+        "date": "2025-09-04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.09739,
+          43.09152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pioneer peak",
+        "elevation": 3972,
+        "date": "2025-09-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.10477,
+          43.0836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oktyabryonok peak",
+        "elevation": 3722,
+        "date": "2025-09-12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.08508,
+          43.09779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fockenstein",
+        "elevation": 1561,
+        "date": "2025-09-28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65153,
+          47.68385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Säuling",
+        "elevation": 2096,
+        "date": "2025-11-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7548,
+          47.53462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kreuzwand",
+        "elevation": 2129,
+        "date": "2025-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.30139,
+          47.43694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jägerkamp",
+        "elevation": 1844,
+        "date": "2025-11-23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.90589,
+          47.67361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Großer Laber",
+        "elevation": 1478,
+        "date": "2025-12-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.11941,
+          47.57733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Doi Sao Thong",
+        "elevation": 1351,
+        "date": "2025-12-24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.79369,
+          20.05261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rehleitenkopf",
+        "elevation": 1352,
+        "date": "2026-01-11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.10365,
+          47.70248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hirschberg",
+        "elevation": 1688,
+        "date": "2026-01-17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6962,
+          47.66101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Notkarspitze",
+        "elevation": 1895,
+        "date": "2026-02-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.055,
+          47.55333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Martinskopf",
+        "elevation": 1743,
+        "date": "2026-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.30784,
+          47.60906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brauneck",
+        "elevation": 1538,
+        "date": "2026-03-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.52104,
+          47.66352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hoher Fricken",
+        "elevation": 2057,
+        "date": "2026-03-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1538,
+          47.53224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Älpeleskopf",
+        "elevation": 1641,
+        "date": "2026-03-22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7423,
+          47.54448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wank",
+        "elevation": 1862,
+        "date": "2026-03-28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.14296,
+          47.50872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Feldberg",
+        "elevation": 1495,
+        "date": "2026-04-03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.00371,
+          47.87399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaiserwacht",
+        "elevation": 1004,
+        "date": "2026-04-05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.06886,
+          47.92319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Auerspitz",
+        "elevation": 1699,
+        "date": "2026-04-11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.94518,
+          47.64395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kampenwand",
+        "elevation": 1654,
+        "date": "2026-04-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.36777,
+          47.75581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Latschenkopf",
+        "elevation": 1745,
+        "date": "2026-05-09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9847,
+          47.58648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hoher Burgstall",
+        "elevation": 2976,
+        "date": "2026-06-04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.71667,
+          47.1
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Johannisberg",
+        "elevation": 3181,
+        "date": "2026-06-05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.6733,
+          47.1094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hohe Riffel",
+        "elevation": 3306,
+        "date": "2026-06-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.66629,
+          47.12288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Leonhardstein",
+        "elevation": 1551,
+        "date": "2026-06-13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.71611,
+          47.6371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sonnenspitze",
+        "elevation": 2443,
+        "date": "2026-06-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.92178,
+          47.3672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grünkopf",
+        "elevation": 1585,
+        "date": "2026-06-21"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.21667,
+          47.43333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schöneck Spitze",
+        "elevation": 1454,
+        "date": "2026-07-11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.01894,
+          47.44498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zugspitze",
+        "elevation": 3001,
+        "date": "2026-07-12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.98635,
+          47.42118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ortles",
+        "elevation": 3865,
+        "date": "2026-07-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.54458,
+          46.50929
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lamsenjoch",
+        "elevation": 2559,
+        "date": "2026-08-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.59968,
+          47.38276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mittellegi",
+        "elevation": 3367,
+        "date": "2026-08-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.02794,
+          46.58619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eiger",
+        "elevation": 3955,
+        "date": "2026-08-09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.00529,
+          46.57761
+        ]
+      }
     }
-     ]
+  ]
 }

@@ -3,6 +3,10 @@
     "lat": 40.63771,
     "lon": 14.53884
   },
+  "Arco": {
+    "lat": 45.91772,
+    "lon": 10.88672
+  },
   "Bergamo": {
     "lat": 45.69601,
     "lon": 9.66721
@@ -14,6 +18,14 @@
   "Castel del Monte": {
     "lat": 42.36544,
     "lon": 13.72592
+  },
+  "Ceniga": {
+    "lat": 45.95115,
+    "lon": 10.90136
+  },
+  "Charvensod": {
+    "lat": 45.72025,
+    "lon": 7.32433
   },
   "Fontainemore": {
     "lat": 45.64746,
@@ -39,9 +51,33 @@
     "lat": 42.32536,
     "lon": 13.75864
   },
+  "Paquier": {
+    "lat": 45.87879,
+    "lon": 7.62575
+  },
+  "Pietramurata": {
+    "lat": 46.02033,
+    "lon": 10.94316
+  },
+  "Riva del Garda": {
+    "lat": 45.88577,
+    "lon": 10.84117
+  },
   "Rome": {
     "lat": 41.89193,
     "lon": 12.51133
+  },
+  "San Valentino alla Muta": {
+    "lat": 46.76415,
+    "lon": 10.53397
+  },
+  "Sarche": {
+    "lat": 46.04773,
+    "lon": 10.95317
+  },
+  "Stelvio": {
+    "lat": 46.59767,
+    "lon": 10.5458
   },
   "Valgrisenche": {
     "lat": 45.63036,

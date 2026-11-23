@@ -1,5 +1,6 @@
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
+use std::path::Path;
 use std::{collections::BTreeMap, fs};
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Coordinates {
@@ -23,13 +24,13 @@ impl Cities {
         self.cities.insert(name, coordinates).is_none()
     }
 
-    pub fn save_to_file(&self, path: &str) -> Result<()> {
+    pub fn save_to_file(&self, path: impl AsRef<Path>) -> Result<()> {
         let json = serde_json::to_string_pretty(&self.cities)?;
         fs::write(path, json)?;
         Ok(())
     }
 
-    pub fn load_from_file(path: &str) -> Result<Self> {
+    pub fn load_from_file(path: impl AsRef<Path>) -> Result<Self> {
         let content = fs::read_to_string(path)?;
         let cities: BTreeMap<String, Coordinates> = serde_json::from_str(&content)?;
         Ok(Self { cities })

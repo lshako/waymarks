@@ -1,5 +1,6 @@
 use anyhow::Result;
 use serde::Deserialize;
+use std::path::Path;
 use std::{collections::BTreeSet, fs};
 
 #[derive(Debug, Deserialize)]
@@ -8,12 +9,12 @@ pub struct Countries {
 }
 
 impl Countries {
-    pub fn load_from_file(path: &str) -> Result<Self> {
+    pub fn load_from_file(path: impl AsRef<Path>) -> Result<Self> {
         let content = fs::read_to_string(path)?;
         let countries: BTreeSet<String> = serde_json::from_str(&content)?;
         Ok(Self { countries })
     }
-    pub fn save_to_file(&self, path: &str) -> Result<()> {
+    pub fn save_to_file(&self, path: impl AsRef<Path>) -> Result<()> {
         let json = serde_json::to_string_pretty(&self.countries)?;
         fs::write(path, json)?;
         Ok(())

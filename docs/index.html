@@ -28,8 +28,9 @@
         worldCopyJump: false          // disable horizontal wrapping
     }).setView([46.8, 8.3], 3);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map tiles © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors | Country data © <a href="https://github.com/georgique/world-geojson">world-geojson</a>',
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        attribution: 'Map tiles © <a href="https://carto.com/attributions">CARTO</a> | Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors | Country data © <a href="https://github.com/georgique/world-geojson">world-geojson</a>',
         maxZoom: 18,
         minZoom: 2,
         noWrap: true

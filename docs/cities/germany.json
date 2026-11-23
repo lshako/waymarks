@@ -3,21 +3,57 @@
     "lat": 50.77664,
     "lon": 6.08342
   },
+  "Aschau im Chiemgau": {
+    "lat": 47.77689,
+    "lon": 12.32297
+  },
   "Bad Reichenhall": {
     "lat": 47.72947,
     "lon": 12.87819
+  },
+  "Bad Tölz": {
+    "lat": 47.76111,
+    "lon": 11.5589
+  },
+  "Bad Wiessee": {
+    "lat": 47.71667,
+    "lon": 11.71667
   },
   "Bamberg": {
     "lat": 49.89873,
     "lon": 10.90067
   },
+  "Bayerisch Gmain": {
+    "lat": 47.71667,
+    "lon": 12.9
+  },
+  "Bayrischzell": {
+    "lat": 47.6744,
+    "lon": 12.01449
+  },
+  "Benediktbeuern": {
+    "lat": 47.70624,
+    "lon": 11.41522
+  },
   "Berlin": {
     "lat": 52.52,
     "lon": 13.405
   },
+  "Bernau": {
+    "lat": 47.80018,
+    "lon": 8.0383
+  },
   "Bonn": {
     "lat": 50.73438,
     "lon": 7.09549
+  },
+  "Bonndorf": {
+    "lat": 47.81863,
+    "lon": 8.34139
+  },
+  "Breitnau": {
+    "lat": 47.93333,
+    "lon": 8.08333
   },
   "Dachau": {
     "lat": 48.26,
@@ -27,13 +63,57 @@
     "lat": 51.05089,
     "lon": 13.73832
   },
+  "Ettal": {
+    "lat": 47.56667,
+    "lon": 11.1
+  },
+  "Farchant": {
+    "lat": 47.53036,
+    "lon": 11.11151
+  },
+  "Fischbachau": {
+    "lat": 47.71952,
+    "lon": 11.95081
+  },
+  "Flintsbach": {
+    "lat": 47.72576,
+    "lon": 12.12419
+  },
   "Frankfurt am Main": {
     "lat": 50.11552,
     "lon": 8.68417
   },
+  "Garmisch-Partenkirchen": {
+    "lat": 47.49209,
+    "lon": 11.09576
+  },
+  "Gmund am Tegernsee": {
+    "lat": 47.75119,
+    "lon": 11.7381
+  },
+  "Grainau": {
+    "lat": 47.47614,
+    "lon": 11.02405
+  },
+  "Hohenschwangau": {
+    "lat": 47.55631,
+    "lon": 10.74085
+  },
+  "Kochel": {
+    "lat": 47.65926,
+    "lon": 11.36827
+  },
+  "Kreuth": {
+    "lat": 47.64085,
+    "lon": 11.74485
+  },
   "Köln": {
     "lat": 50.93333,
     "lon": 6.95
+  },
+  "Lenggries": {
+    "lat": 47.68271,
+    "lon": 11.57474
   },
   "Mittenwald": {
     "lat": 47.4422,
@@ -47,12 +127,44 @@
     "lat": 49.45421,
     "lon": 11.07752
   },
+  "Oberau": {
+    "lat": 47.55979,
+    "lon": 11.13919
+  },
   "Passau": {
     "lat": 48.5665,
     "lon": 13.43122
   },
+  "Pullach im Isartal": {
+    "lat": 48.06122,
+    "lon": 11.52148
+  },
+  "Schliersee": {
+    "lat": 47.73621,
+    "lon": 11.85936
+  },
+  "Schluchsee": {
+    "lat": 47.81667,
+    "lon": 8.18333
+  },
+  "Starnberg": {
+    "lat": 48.00193,
+    "lon": 11.34416
+  },
   "Stuttgart": {
     "lat": 48.78232,
     "lon": 9.17702
+  },
+  "Tegernsee": {
+    "lat": 47.7123,
+    "lon": 11.7582
+  },
+  "Unterammergau": {
+    "lat": 47.61658,
+    "lon": 11.02718
+  },
+  "Wolfratshausen": {
+    "lat": 47.91289,
+    "lon": 11.42166
   }
 }

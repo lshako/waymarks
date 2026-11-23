@@ -3,6 +3,10 @@
     "lat": 55.78874,
     "lon": 49.12214
   },
+  "Krasnogorsk": {
+    "lat": 55.81904,
+    "lon": 37.32984
+  },
   "Petrozavodsk": {
     "lat": 61.78491,
     "lon": 34.34691
@@ -14,6 +18,10 @@
   "Saint Petersburg": {
     "lat": 59.93863,
     "lon": 30.31413
+  },
+  "Yubileyny": {
+    "lat": 55.93333,
+    "lon": 37.83333
   },
   "moscow": {
     "lat": 55.75222,

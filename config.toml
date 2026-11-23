@@ -8,3 +8,27 @@ download_dir = "downloads"
 dir = "docs"
 countries_file = "countries.json"
 cities_folder = "cities"
+summits_file = "summits.json"
+countries_geo_folder = "countries-geo"
+
+[garmin]
+# The garmin-cli executable that downloads the activities.
+command = "garmin"
+# Where `garmin sync` keeps its Parquet files.
+storage_dir = "~/.local/share/garmin"
+# Activity types that can reach a summit. Empty accepts every type.
+activity_types = [
+    "hiking",
+    "mountaineering",
+    "rock_climbing",
+    "trail_running",
+    "backcountry_skiing",
+    "resort_skiing",
+    "ski_touring",
+]
+# An activity is only a summit when its highest track point reaches this.
+min_elevation = 1000.0
+# How close a city must be to the start to count as visited.
+city_radius_km = 25.0
+# How far the nearest city may be before the country counts as unknown.
+max_city_distance_km = 300.0

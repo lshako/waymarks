@@ -1,10 +1,13 @@
+use crate::config::Config;
+use crate::file_ops;
 use anyhow::Result;
 use chrono::NaiveDate;
 use csv::ReaderBuilder;
 use serde::de::DeserializeOwned;
 use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use std::fmt;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Geoname {
@@ -54,6 +57,162 @@ pub enum FeatureClass {
     T, // mountain, hill, rock,...
     U, // undersea
     V, // forest, heath,...
+}
+
+/// Maps country names to their ISO code and back, both lowercased.
+pub struct CountryMaps {
+    name_to_iso: HashMap<String, String>,
+    iso_to_name: HashMap<String, String>,
+}
+
+impl CountryMaps {
+    pub fn new() -> Self {
+        Self {
+            name_to_iso: HashMap::new(),
+            iso_to_name: HashMap::new(),
+        }
+    }
+
+    pub fn from_country_info(countries: &[CountryInfo]) -> Self {
+        let mut maps = Self::new();
+        for country in countries {
+            maps.add_country(country.country.clone(), country.iso.clone());
+        }
+        maps
+    }
+
+    pub fn add_country(&mut self, name: String, iso: String) {
+        let name = name.to_lowercase();
+        let iso = iso.to_lowercase();
+        self.name_to_iso.insert(name.clone(), iso.clone());
+        self.iso_to_name.insert(iso, name);
+    }
+
+    pub fn get_iso(&self, name: &str) -> Option<&String> {
+        self.name_to_iso.get(name)
+    }
+
+    pub fn get_name(&self, iso: &str) -> Option<&String> {
+        self.iso_to_name.get(&iso.to_lowercase())
+    }
+
+    /// Resolves either a country name or an ISO code into `(iso, name)`.
+    pub fn resolve_country(&self, name_or_iso: &str) -> Option<(String, String)> {
+        let name_or_iso = name_or_iso.to_lowercase();
+        if let Some(iso) = self.get_iso(&name_or_iso) {
+            Some((iso.clone(), name_or_iso.to_string()))
+        } else {
+            self.get_name(&name_or_iso)
+                .map(|name| (name_or_iso.to_string(), name.clone()))
+        }
+    }
+}
+
+impl Default for CountryMaps {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+/// The file name a Geonames URL downloads to.
+fn download_path(config: &Config, url: &str, fallback: &str) -> PathBuf {
+    let filename = url.rsplit('/').next().unwrap_or(fallback);
+    config.geonames.download_dir.join(filename)
+}
+
+/// Downloads `countryInfo.txt` unless it is already there, and parses it.
+pub(crate) async fn load_country_info(config: &Config) -> Result<Vec<CountryInfo>> {
+    let url = config.country_info_url();
+    let path = download_path(config, &url, "countryInfo.txt");
+
+    file_ops::ensure_file(&url, &path).await?;
+    read_tsv::<CountryInfo, _>(&path)
+}
+
+/// Downloads and unzips the Geonames cities dump unless it is already there,
+/// and parses it.
+pub(crate) async fn load_cities(config: &Config) -> Result<Vec<Geoname>> {
+    let url = config.cities_url();
+    let zip_file = download_path(config, &url, "cities.zip");
+
+    file_ops::ensure_file(&url, &zip_file).await?;
+    file_ops::unzip_file(
+        zip_file.to_str().unwrap(),
+        config.geonames.download_dir.to_str().unwrap(),
+    )
+    .await?;
+
+    read_tsv::<Geoname, _>(zip_file.with_extension("txt"))
+}
+
+/// Downloads the Geonames dump of one country and returns the mountain
+/// features it holds — the named peaks that give a summit its real name.
+///
+/// The per-country dumps are small (a few megabytes) and only fetched for the
+/// countries a summit was actually reached in.
+pub(crate) async fn load_summit_features(
+    config: &Config,
+    iso: &str,
+    codes: &[String],
+) -> Result<Vec<Geoname>> {
+    let iso = iso.to_uppercase();
+    let url = format!("{}{iso}.zip", config.geonames.base_url);
+    let zip_file = config.geonames.download_dir.join(format!("{iso}.zip"));
+
+    file_ops::ensure_file(&url, &zip_file).await?;
+    file_ops::unzip_file(
+        zip_file.to_str().unwrap(),
+        config.geonames.download_dir.to_str().unwrap(),
+    )
+    .await?;
+
+    read_features(zip_file.with_extension("txt"), codes)
+}
+
+/// Reads only the rows of a Geonames dump whose feature code is wanted.
+///
+/// A country dump holds every feature there is — millions of rows for a large
+/// country — so each row is checked before it is deserialized.
+pub fn read_features<P>(path: P, codes: &[String]) -> Result<Vec<Geoname>>
+where
+    P: AsRef<Path>,
+{
+    /// The column holding the feature code, counting from zero.
+    const FEATURE_CODE: usize = 7;
+
+    let mut reader = ReaderBuilder::new()
+        .delimiter(b'\t')
+        .has_headers(false)
+        .flexible(true)
+        .from_path(path)
+        .map_err(|e| anyhow::anyhow!("Failed to read the Geonames dump: {}", e))?;
+
+    let mut features = Vec::new();
+    let mut record = csv::StringRecord::new();
+
+    while reader
+        .read_record(&mut record)
+        .map_err(|e| anyhow::anyhow!("Failed to read a row of the Geonames dump: {}", e))?
+    {
+        let Some(code) = record.get(FEATURE_CODE) else {
+            continue;
+        };
+        if !codes.iter().any(|wanted| wanted == code) {
+            continue;
+        }
+
+        if let Ok(feature) = record.deserialize::<Geoname>(None) {
+            features.push(feature);
+        }
+    }
+
+    Ok(features)
+}
+
+/// The form country names take in `countries.json` and in the city file names:
+/// lowercase, with spaces replaced by underscores.
+pub fn normalize_country_name(name: &str) -> String {
+    name.to_lowercase().replace(' ', "_")
 }
 
 pub fn read_tsv<T, P>(path: P) -> Result<Vec<T>>
